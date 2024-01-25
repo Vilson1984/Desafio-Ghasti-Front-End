@@ -1,0 +1,59 @@
+.Personal-Data {
+    background-color: #e30001;
+    color: #f7f7f7;
+}
+
+.grafico-barras {
+    background-color: aqua;
+    width: 800px;
+}
+
+.grafico-barras .colunas {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.grafico-barras .colunas .escala-y {
+    width: 80px;
+}
+
+.grafico-barras .colunas .area-grafico {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.escala-x {
+    height: 60px;
+    background-color: #3e3e3e;
+    border-top: solid 1px azure;
+    display: flex;
+}
+
+.eixo-x {
+    width: calc(100%/9);
+    font-size: smaller;
+    color: #f7f7f7;
+}
+
+.area-barras {
+    flex-grow: 1;
+    display: flex;
+}
+
+.divisao {
+    border: 1px solid red;
+    height: 100px;
+    width: calc(100%/9);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.grafico-barras .colunas .area-grafico .area-barras .divisao .barra {
+    width: 20%;
+    border: 1px solid #ccc;
+    background-color: #e30001;
+}
