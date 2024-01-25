@@ -1,41 +1,78 @@
+h2,
+h3 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+}
+
+.Container-Data {
+    background-color: #f00;
+    display: inline-flex;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
 .Personal-Data {
-    background-color: #e30001;
+    Background-color: #3e3e3e;
     color: #f7f7f7;
+    padding: 15px;
+    border-right: solid 1px #ccc;
+    width: 50%;
 }
 
-.grafico-barras {
-    background-color: aqua;
-    width: 800px;
+.Contact {
+    Background-color: #3e3e3e;
+    color: #f7f7f7;
+    padding: 15px;
 }
 
-.grafico-barras .colunas {
+.Chart-Bars {
+    background-color: #3e3e3e;
+    width: 90%;
+    color: #f7f7f7;
+    padding: 15px;
+}
+
+.Chart-Bars,
+.h2 {
+    text-align: center;
+}
+
+.Chart-Bars .Columns {
     display: flex;
     flex-direction: row;
     height: 100%;
 }
 
-.grafico-barras .colunas .escala-y {
-    width: 80px;
+.Chart-Bars .Columns .Scale-Y {
+    width: 30px;
+    color: #f7f7f7;
 }
 
-.grafico-barras .colunas .area-grafico {
+.Chart-Bars .Columns .Chart-Area {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 
 }
 
-.escala-x {
-    height: 60px;
+.Scale-X {
+    height: 30px;
     background-color: #3e3e3e;
     border-top: solid 1px azure;
     display: flex;
 }
 
-.eixo-x {
+.Date {
     width: calc(100%/9);
-    font-size: smaller;
+    font-size: 10px;
     color: #f7f7f7;
+    text-align: center;
+    padding: 1px;
 }
 
 .area-barras {
@@ -43,17 +80,32 @@
     display: flex;
 }
 
-.divisao {
-    border: 1px solid red;
-    height: 100px;
+.Division {
+    height: 200px;
     width: calc(100%/9);
     display: flex;
-    justify-content: center;
-    align-items: end;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column
 }
 
-.grafico-barras .colunas .area-grafico .area-barras .divisao .barra {
+
+.Chart-Bars .Columns .Chart-Area .area-barras .Division .barra {
     width: 20%;
-    border: 1px solid #ccc;
     background-color: #e30001;
+}
+
+.Chart-Bars .Columns .Chart-Area .area-barras .Division .Value-Bar {
+    border-bottom: 1px solid #f7f7f7;
+    font-size: 10px;
+}
+
+.Numbers-Y {
+    height: calc((100% - -2%)/5);
+    border-top: solid 1px #e30001;
+    align-items: baseline;
+    display: flex;
+    justify-content: end;
+    font-size: 11px;
+    padding: 1px;
 }
