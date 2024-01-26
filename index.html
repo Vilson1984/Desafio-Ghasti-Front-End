@@ -5,35 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Desafio Front-End::Ghasti::</title>
 </head>
-<!--
-- Renderizar seus dados cadastrais (não sensiveis)
-- Um gráfico com o histórico de um anos da taxa selic
-- Uma tabela com a projeção da inflação dos próximos 12 meses
 
-Qualquer item que queira adicionar para uma melhor experiência do usuário e bem vinda.
--->
 
 <body>
+    <!--Rendering Personal Data-->
     <div class="Container-Data">
-        <div class="Personal-Data">
-            <h2>Dados cadastrais</h2>
-            <p>Nome: Vilson Camponucci Monteiro</p>
-            <p>Idade: 39 anos</p>
-            <p>Área de interesse: Desenvolvedor Front-End</p>
+        <div class="Container-Personal-Data">
+            <div class="Icon-Title">
+                <img class="Icon" src="user.png" alt="Ícone de Usuário">
+                <h2>Dados cadastrais</h2>
+            </div>
+            <div class="Personal-Data">
+                <p>Nome: Vilson Camponucci Monteiro</p>
+                <p>Idade: 39 anos</p>
+                <p>Cidade: Carapicuíba -Sp</p>
+                <p>Área de interesse: Desenvolvedor Front-End</p>
+            </div>
         </div>
         <div class="Contact">
-            <h2>Contato:</h2>
+            <div class="Icon-Title">
+                <img class="Icon" src="phone-call.png"></i>
+                <h2>Contato:</h2>
+            </div>
             <p>Telefone:(11) 96436-6495</p>
             <p>E-mail:vcmorion@hotmail.com</p>
             <p>Github:www.github.com/Vilson1984</p>
         </div>
     </div>
-
-
+    <br>
+    <!--Chart about Evolution Inflation Tax-->
     <div class="Chart-Bars">
-        <h2>Evolução da taxa SELIC de Out/22 a Dez/23</h2>
+        <div class="Icon-Title">
+            <img class="Icon" src="chart-histogram.png"></img>
+            <h2>Evolução da taxa SELIC de Out/22 a Dez/23</h2>
+        </div>
         <div class="Columns">
             <div class="escala-y">
                 <div class="Numbers-Y">20</div>
@@ -93,9 +101,47 @@ Qualquer item que queira adicionar para uma melhor experiência do usuário e be
                     <div class="Date">03/08/23 - 20/09/23</div>
                     <div class="Date">21/09/23 - 02/11/23</div>
                     <div class="Date">03/11/23 - 13/12/23</div>
-
                 </div>
             </div>
+        </div>
+        <p class="Source">fonte: www.bcb.gov.br</p>
+    </div>
+    <br>
+    <!--Table about Projection IPCA, tax mensure inflation-->
+    <div class="Container-Projection">
+        <div class="Icon-Title">
+            <img class="Icon" src="stats.png"></img>
+            <h2>Projeção da inflação para os próximos 12 meses (2024)</h2>
+        </div>
+        <div class="Table-Inflation-Rate">
+            <!--Columns-->
+            <div class="cell">Mês</div>
+            <div class="cell">Jan</div>
+            <div class="cell">Fev</div>
+            <div class="cell">Mar</div>
+            <div class="cell">Abr</div>
+            <div class="cell">Mai</div>
+            <div class="cell">Jun</div>
+            <div class="cell">Jul</div>
+            <div class="cell">Ago</div>
+            <div class="cell">Set</div>
+            <div class="cell">Out</div>
+            <div class="cell">Nov</div>
+            <div class="cell">Dez</div>
+            <!--Rows-->
+            <div class="cell">IPCA</div>
+            <div class="cell">3,67</div>
+            <div class="cell">3,92</div>
+            <div class="cell">4,00</div>
+            <div class="cell">4,10</div>
+            <div class="cell">4,20</div>
+            <div class="cell">4,10</div>
+            <div class="cell">4,00</div>
+            <div class="cell">3,92</div>
+            <div class="cell">3,85</div>
+            <div class="cell">3,87</div>
+            <div class="cell">3,90</div>
+            <div class="cell">3,90</div>
         </div>
     </div>
 </body>

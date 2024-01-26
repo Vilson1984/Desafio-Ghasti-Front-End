@@ -11,30 +11,55 @@ p {
 .Container-Data {
     background-color: #f00;
     display: inline-flex;
-    padding: 10px;
-    border-radius: 15px;
-    margin: 15px;
+    width: 90%;
+    border-radius: 10px;
+    justify-content: center;
+    border: solid 5px #e30001;
+}
+
+.Container-Personal-Data {
+    Background-color: #3e3e3e;
+    color: #f7f7f7;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 90%;
+    border-right: solid 1px #f7f7f7;
 }
 
 .Personal-Data {
-    Background-color: #3e3e3e;
-    color: #f7f7f7;
-    padding: 15px;
-    border-right: solid 1px #ccc;
-    width: 50%;
+    padding-left: 30px;
+}
+
+.Icon {
+    width: 50px;
+    height: 50px;
+    background-color: #f7f7f7;
+    border: #f7f7f7 1px solid;
+    border-radius: 10px;
+    margin-right: 33px;
+}
+
+.Icon-Title {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .Contact {
     Background-color: #3e3e3e;
     color: #f7f7f7;
     padding: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .Chart-Bars {
     background-color: #3e3e3e;
     width: 90%;
     color: #f7f7f7;
-    padding: 15px;
+    border: solid 5px #e30001;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .Chart-Bars,
@@ -42,10 +67,12 @@ p {
     text-align: center;
 }
 
-.Chart-Bars .Columns {
+.Columns {
     display: flex;
     flex-direction: row;
     height: 100%;
+    width: 95%;
+    margin: auto;
 }
 
 .Chart-Bars .Columns .Scale-Y {
@@ -100,6 +127,12 @@ p {
     font-size: 10px;
 }
 
+.Source {
+    font-size: 8px;
+    text-align: initial;
+    margin-left: 40px;
+}
+
 .Numbers-Y {
     height: calc((100% - -2%)/5);
     border-top: solid 1px #e30001;
@@ -108,4 +141,35 @@ p {
     justify-content: end;
     font-size: 11px;
     padding: 1px;
+}
+
+.Table-Inflation-Rate {
+    background-color: #3e3e3e;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    gap: 10px;
+    width: 95%;
+    border: 10px #3e3e3e solid;
+    color: #f7f7f7;
+    margin: auto;
+}
+
+.Container-Projection {
+    text-decoration: underline;
+    text-align: center;
+    background-color: #3e3e3e;
+    color: #f7f7f7;
+    width: 90%;
+    border: solid 5px #e30001;
+    border-radius: 10px;
+    padding-bottom: 15px;
+}
+
+.cell {
+    background-color: #e30001;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+    border-radius: 4px;
+    border: solid 1px;
 }
