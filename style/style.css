@@ -1,56 +1,60 @@
+body {
+    display: grid;
+    align-items: center; 
+    justify-content: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh; 
+    margin: 0;
+}
+
+
 h2,
 h3 {
     text-decoration: underline;
-    text-align: center;
 }
 
 p {
-    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.Container-Data {
+.Container-Datas {
     background-color: #f00;
     display: inline-flex;
     width: 90%;
     border-radius: 10px;
     justify-content: center;
     border: solid 5px #e30001;
+    height: 30vh;
 }
 
 .Container-Personal-Data {
     Background-color: #3e3e3e;
     color: #f7f7f7;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 90%;
-    border-right: solid 1px #f7f7f7;
+    display: flex;
+    border-right: 1px solid #f7f7f7;
+
 }
 
-.Personal-Data {
-    padding-left: 30px;
-}
+
 
 .Icon {
-    width: 50px;
-    height: 50px;
+    width: 25%;
+    height: 30vh;
     background-color: #f7f7f7;
-    border: #f7f7f7 1px solid;
     border-radius: 10px;
-    margin-right: 33px;
+    margin-right: 10px;
 }
 
-.Icon-Title {
-    display: flex;
-    margin-left: 10px;
-    margin-top: 10px;
-}
+
 
 .Contact {
     Background-color: #3e3e3e;
     color: #f7f7f7;
-    padding: 15px;
+    padding-left: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    padding-right: 10px;
+    width: 38%;
 }
 
 .Chart-Bars {
@@ -59,7 +63,7 @@ p {
     color: #f7f7f7;
     border: solid 5px #e30001;
     border-radius: 10px;
-    margin-top: 20px;
+    height: 30vh;
 }
 
 .Chart-Bars,
@@ -67,20 +71,20 @@ p {
     text-align: center;
 }
 
-.Columns {
+.Chart {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 50%;
     width: 95%;
     margin: auto;
 }
 
-.Chart-Bars .Columns .Scale-Y {
+.Chart-Bars .Chart .Scale-Y {
     width: 30px;
     color: #f7f7f7;
 }
 
-.Chart-Bars .Columns .Chart-Area {
+.Chart-Bars .Chart .Chart-Area {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -108,7 +112,7 @@ p {
 }
 
 .Division {
-    height: 200px;
+    height: 99px;
     width: calc(100%/9);
     display: flex;
     justify-content: end;
@@ -117,12 +121,12 @@ p {
 }
 
 
-.Chart-Bars .Columns .Chart-Area .area-barras .Division .barra {
+.Chart-Bars .Chart .Chart-Area .area-barras .Division .barra {
     width: 20%;
     background-color: #e30001;
 }
 
-.Chart-Bars .Columns .Chart-Area .area-barras .Division .Value-Bar {
+.Chart-Bars .Chart .Chart-Area .area-barras .Division .Value-Bar {
     border-bottom: 1px solid #f7f7f7;
     font-size: 10px;
 }
@@ -163,6 +167,7 @@ p {
     border: solid 5px #e30001;
     border-radius: 10px;
     padding-bottom: 15px;
+    height: 30vh;
 }
 
 .cell {
