@@ -1,10 +1,10 @@
 body {
     display: grid;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     grid-template-rows: 1fr 1fr 1fr;
-    height: 100vh; 
-    margin: 0;
+    height: 100vh;
+    margin: auto;
 }
 
 
@@ -13,9 +13,7 @@ h3 {
     text-decoration: underline;
 }
 
-p {
-    margin-bottom: 5px;
-}
+
 
 .Container-Datas {
     background-color: #f00;
@@ -23,8 +21,8 @@ p {
     width: 90%;
     border-radius: 10px;
     justify-content: center;
-    border: solid 5px #e30001;
-    height: 30vh;
+    border: solid 1.5px #e30001;
+    height: 32vh;
 }
 
 .Container-Personal-Data {
@@ -32,14 +30,15 @@ p {
     color: #f7f7f7;
     display: flex;
     border-right: 1px solid #f7f7f7;
-
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 
 
 .Icon {
     width: 25%;
-    height: 30vh;
+    height: 32vh;
     background-color: #f7f7f7;
     border-radius: 10px;
     margin-right: 10px;
@@ -61,9 +60,9 @@ p {
     background-color: #3e3e3e;
     width: 90%;
     color: #f7f7f7;
-    border: solid 5px #e30001;
+    border: solid 1.5px #e30001;
     border-radius: 10px;
-    height: 30vh;
+    height: 32vh;
 }
 
 .Chart-Bars,
@@ -150,12 +149,11 @@ p {
 .Table-Inflation-Rate {
     background-color: #3e3e3e;
     display: grid;
-    grid-template-columns: repeat(13, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
     width: 95%;
-    border: 10px #3e3e3e solid;
-    color: #f7f7f7;
     margin: auto;
+    height: 30%;
+    gap: 2px;
 }
 
 .Container-Projection {
@@ -164,17 +162,16 @@ p {
     background-color: #3e3e3e;
     color: #f7f7f7;
     width: 90%;
-    border: solid 5px #e30001;
+    border: solid 1.5px #e30001;
     border-radius: 10px;
     padding-bottom: 15px;
-    height: 30vh;
+    height: 32vh;
 }
 
 .cell {
     background-color: #e30001;
-    display: flex;
-    justify-content: center;
-    padding: 7px;
     border-radius: 4px;
     border: solid 1px;
+    font-size: 15px;
+    padding: 8px;
 }

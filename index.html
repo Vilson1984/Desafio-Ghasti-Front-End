@@ -14,8 +14,8 @@
     <!--Rendering Personal Data-->
     <div class="Container-Datas">
         <div class="Container-Personal-Data">
-                <img class="Icon" src="images/user.png" alt="Ícone de Usuário">
-            
+            <img class="Icon" src="images/user.png" alt="Ícone de Usuário">
+
             <div class="Personal-Data">
                 <h2>Dados cadastrais</h2>
                 <div class="info-item">
@@ -40,7 +40,7 @@
             </div>
             <div class="info-item">
                 <span>E-mail:</span>vcmorion@hotmail.com
-            </div>          
+            </div>
             <div class="info-item">
                 <span>Github:</span>www.github.com/Vilson1984
             </div>
@@ -126,33 +126,93 @@
         </div>
         <div class="Table-Inflation-Rate">
             <!--Columns-->
-            <div class="cell">Mês</div>
-            <div class="cell">Jan</div>
-            <div class="cell">Fev</div>
-            <div class="cell">Mar</div>
-            <div class="cell">Abr</div>
-            <div class="cell">Mai</div>
-            <div class="cell">Jun</div>
-            <div class="cell">Jul</div>
-            <div class="cell">Ago</div>
-            <div class="cell">Set</div>
-            <div class="cell">Out</div>
-            <div class="cell">Nov</div>
-            <div class="cell">Dez</div>
-            <!--Rows-->
-            <div class="cell">IPCA</div>
-            <div class="cell">3,67</div>
-            <div class="cell">3,92</div>
-            <div class="cell">4,00</div>
-            <div class="cell">4,10</div>
-            <div class="cell">4,20</div>
-            <div class="cell">4,10</div>
-            <div class="cell">4,00</div>
-            <div class="cell">3,92</div>
-            <div class="cell">3,85</div>
-            <div class="cell">3,87</div>
-            <div class="cell">3,90</div>
-            <div class="cell">3,90</div>
+            <div class="cell">Mês-Ano</div>
+            <div class="cell">Inflação</div>
+
+            <!-- Adicione isso onde deseja exibir os dados -->
+            <div id="dadosMes"></div>
+            <div id="dadosPercentual"></div>
+
+            <!-- Incluindo o script JavaScript com o mock -->
+            <script>
+                // Função para gerar um mock de dados
+                function gerarMock(mes, elementoMes, porcent) {
+                    const ano = 2024;
+                    const meses = [
+                        "Janeiro", "Fevereiro", "Março",
+                        "Abril", "Maio", "Junho",
+                        "Julho", "Agosto", "Setembro",
+                        "Outubro", "Novembro", "Dezembro"
+                    ];
+
+                    const percentuaisPorMes = {
+                        "Janeiro": 3.67,
+                        "Fevereiro": 3.92,
+                        "Março": 4.00,
+                        "Abril": 4.10,
+                        "Maio": 4.20,
+                        "Junho": 4.10,
+                        "Julho": 4.00,
+                        "Agosto": 3.92,
+                        "Setembro": 3.85,
+                        "Outubro": 3.87,
+                        "Novembro": 3.90,
+                        "Dezembro": 3.90
+                    };
+
+                    elementoMes.innerHTML = ` 
+                    <div class="cell"> ${mes.slice(0,3)} de 24</div>    
+                    
+                    `;
+                    porcent.innerHTML = `<div class="cell"> ${percentuaisPorMes[mes]}%</div>`
+
+                }
+
+                // Exemplo de uso para Janeiro de 2024
+                const elementoDadosMes = document.getElementById("dadosMes");
+                gerarMock("Janeiro", elementoDadosMes);
+            
+                const elementoPercentual = document.getElementById("dadosPercentual");
+                gerarMock("Janeiro", elementoPercentual);
+            </script>
+
+
+            <!--    <div class="cell">Jan de 24</div>
+            <div class="cell">3.67</div>
+            
+            <div class="cell">Fev de 24</div>
+            <div class="cell">3.92</div>
+
+            <div class="cell">Mar de 24</div>
+            <div class="cell">4.00</div>
+
+            <div class="cell">Abr de 24</div>
+            <div class="cell">4.10</div>
+
+            <div class="cell">Mai de 24</div>
+            <div class="cell">4.20</div>
+
+            <div class="cell">Jun de 24</div>
+            <div class="cell">4.10</div>
+
+            <div class="cell">Jul de 24</div>
+            <div class="cell">4.00</div>
+            
+            <div class="cell">Ago de 24</div>
+            <div class="cell">3.92</div>
+            
+            <div class="cell">Set de 24</div>
+            <div class="cell">3.85</div>
+            
+            <div class="cell">Out de 24</div>
+            <div class="cell">3.87</div>
+            
+            <div class="cell">Nov de 24</div>
+            <div class="cell">3.90</div>
+
+            <div class="cell">Dez de 24</div>
+            <div class="cell">3.90</div> 
+        -->
+
         </div>
-    </div>
 </body>
