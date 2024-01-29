@@ -18,7 +18,7 @@ h3 {
 .Container-Datas {
     background-color: #f00;
     display: inline-flex;
-    width: 90%;
+    width: 93%;
     border-radius: 10px;
     justify-content: center;
     border: solid 1.5px #e30001;
@@ -34,7 +34,13 @@ h3 {
     border-bottom-left-radius: 10px;
 }
 
-
+.Icon-stats{
+    width: 25%;
+    height: 32vh;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin-right: 10px;
+}
 
 .Icon {
     width: 25%;
@@ -58,7 +64,7 @@ h3 {
 
 .Chart-Bars {
     background-color: #3e3e3e;
-    width: 90%;
+    width: 93%;
     color: #f7f7f7;
     border: solid 1.5px #e30001;
     border-radius: 10px;
@@ -134,10 +140,11 @@ h3 {
     font-size: 8px;
     text-align: initial;
     margin-left: 40px;
+    margin-top: 18px;
 }
 
 .Numbers-Y {
-    height: calc((100% - -2%)/5);
+    height: calc((100% - -9%)/5);
     border-top: solid 1px #e30001;
     align-items: baseline;
     display: flex;
@@ -148,20 +155,20 @@ h3 {
 
 .Table-Inflation-Rate {
     background-color: #3e3e3e;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 95%;
-    margin: auto;
-    height: 30%;
-    gap: 2px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 95%;
+  margin: auto;
+  gap: 2px;
+  position: relative;
+  top: 10px;
 }
 
 .Container-Projection {
-    text-decoration: underline;
     text-align: center;
     background-color: #3e3e3e;
     color: #f7f7f7;
-    width: 90%;
+    width: 93%;
     border: solid 1.5px #e30001;
     border-radius: 10px;
     padding-bottom: 15px;
@@ -172,6 +179,6 @@ h3 {
     background-color: #e30001;
     border-radius: 4px;
     border: solid 1px;
-    font-size: 15px;
-    padding: 8px;
+    font-size: 20px;
+    line-height: 2;
 }

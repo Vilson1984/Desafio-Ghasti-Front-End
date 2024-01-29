@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +7,11 @@
 
     <title>Desafio Front-End::Ghasti::</title>
 </head>
-
-
 <body>
     <!--Rendering Personal Data-->
     <div class="Container-Datas">
         <div class="Container-Personal-Data">
             <img class="Icon" src="images/user.png" alt="Ícone de Usuário">
-
             <div class="Personal-Data">
                 <h2>Dados cadastrais</h2>
                 <div class="info-item">
@@ -33,7 +29,6 @@
             </div>
         </div>
         <div class="Contact">
-            <!--                <img class="Icon" src="images/phone-call.png"></i> -->
             <h2>Contato:</h2>
             <div class="info-item">
                 <span>Telefone:</span>(11) 96436-6495
@@ -46,11 +41,9 @@
             </div>
         </div>
     </div>
-
     <!--Chart about Evolution Inflation Tax-->
     <div class="Chart-Bars">
         <div class="Icon-Title">
-            <!--            <img class="Icon" src="images/chart-histogram.png"></img> -->
             <h2>Evolução da taxa SELIC de Out/22 a Dez/23</h2>
         </div>
         <div class="Chart">
@@ -61,10 +54,8 @@
                 <div class="Numbers-Y">5</div>
                 <div class="Numbers-Y">0</div>
             </div>
-
             <div class="Chart-Area">
                 <div class="area-barras">
-
                     <div class="Division" style="border-left: 1px solid #f7f7f7;">
                         <div class="Value-Bar">13,65%</div>
                         <div class="barra" style="height: 68.25%;"></div>
@@ -117,26 +108,22 @@
         </div>
         <p class="Source">fonte: www.bcb.gov.br</p>
     </div>
-
     <!--Table about Projection IPCA, tax mensure inflation-->
     <div class="Container-Projection">
         <div class="Icon-Title">
-            <!--    <img class="Icon" src="images/stats.png"></img>  -->
             <h2>Projeção da inflação para os próximos 12 meses (2024)</h2>
         </div>
+        <!-- Adicione isso onde deseja exibir os dados -->
         <div class="Table-Inflation-Rate">
             <!--Columns-->
-            <div class="cell">Mês-Ano</div>
-            <div class="cell">Inflação</div>
-
-            <!-- Adicione isso onde deseja exibir os dados -->
-            <div id="dadosMes"></div>
-            <div id="dadosPercentual"></div>
-
-            <!-- Incluindo o script JavaScript com o mock -->
+            <div class="cell" style="height: 50px; padding-top: 7px;font-weight: bold;">Mês-Ano</div>
+            <div class="cell" style="height: 50px; padding-top: 7px;font-weight: bold;">Inflação</div>
+            <!--Datas month and tax% -->
+            <div class="cell" id="Data-Month" style="background-color:#b35e5e"></div>
+            <div class="cell" id="Data-Percent" style="background-color:#b35e5e"></div>
             <script>
-                // Função para gerar um mock de dados
-                function gerarMock(mes, elementoMes, porcent) {
+                // Create Date's Mock 
+                function Mock(mes, elementoMes, elementoPercent) {
                     const ano = 2024;
                     const meses = [
                         "Janeiro", "Fevereiro", "Março",
@@ -144,7 +131,6 @@
                         "Julho", "Agosto", "Setembro",
                         "Outubro", "Novembro", "Dezembro"
                     ];
-
                     const percentuaisPorMes = {
                         "Janeiro": 3.67,
                         "Fevereiro": 3.92,
@@ -159,60 +145,15 @@
                         "Novembro": 3.90,
                         "Dezembro": 3.90
                     };
-
-                    elementoMes.innerHTML = ` 
-                    <div class="cell"> ${mes.slice(0,3)} de 24</div>    
-                    
-                    `;
-                    porcent.innerHTML = `<div class="cell"> ${percentuaisPorMes[mes]}%</div>`
-
+                    // Set values to div Data-Month
+                    elementoMes.innerHTML = `<div>${mes.slice(0, 3)} de ${ano.toString().slice(-2)}</div>`;
+                    // Set valuesto to div Data-Percent
+                    elementoPercent.innerHTML = `<div>${percentuaisPorMes[mes]}%</div>`;
                 }
-
-                // Exemplo de uso para Janeiro de 2024
-                const elementoDadosMes = document.getElementById("dadosMes");
-                gerarMock("Janeiro", elementoDadosMes);
-            
-                const elementoPercentual = document.getElementById("dadosPercentual");
-                gerarMock("Janeiro", elementoPercentual);
+                // Datas mock to Janeiro de 2024
+                const elementoDataMonth = document.getElementById("Data-Month");
+                const elementoDataPercent = document.getElementById("Data-Percent");
+                Mock("Janeiro", elementoDataMonth, elementoDataPercent);
             </script>
-
-
-            <!--    <div class="cell">Jan de 24</div>
-            <div class="cell">3.67</div>
-            
-            <div class="cell">Fev de 24</div>
-            <div class="cell">3.92</div>
-
-            <div class="cell">Mar de 24</div>
-            <div class="cell">4.00</div>
-
-            <div class="cell">Abr de 24</div>
-            <div class="cell">4.10</div>
-
-            <div class="cell">Mai de 24</div>
-            <div class="cell">4.20</div>
-
-            <div class="cell">Jun de 24</div>
-            <div class="cell">4.10</div>
-
-            <div class="cell">Jul de 24</div>
-            <div class="cell">4.00</div>
-            
-            <div class="cell">Ago de 24</div>
-            <div class="cell">3.92</div>
-            
-            <div class="cell">Set de 24</div>
-            <div class="cell">3.85</div>
-            
-            <div class="cell">Out de 24</div>
-            <div class="cell">3.87</div>
-            
-            <div class="cell">Nov de 24</div>
-            <div class="cell">3.90</div>
-
-            <div class="cell">Dez de 24</div>
-            <div class="cell">3.90</div> 
-        -->
-
         </div>
 </body>
